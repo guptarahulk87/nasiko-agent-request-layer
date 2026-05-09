@@ -1,0 +1,6 @@
+{
+  "name": "translator",
+  "display_name": "Translator Agent",
+  "version": "0.1.0",
+  "description": "Local demo translator agent package."
+}

@@ -60,6 +60,47 @@ Interactive API docs:
 http://127.0.0.1:8000/docs
 ```
 
+## Local Agent Deployment Demo
+
+This repository includes a lightweight local demo that matches the first-agent
+deployment flow:
+
+```bash
+cat orchestrator/superuser_credentials.json
+uvicorn app.main:app --host 127.0.0.1 --port 9100 --reload
+```
+
+Then open:
+
+```text
+http://localhost:9100/app/
+```
+
+Use these local demo credentials:
+
+```text
+Access Key: local-admin-key
+Access Secret: local-admin-secret
+```
+
+The demo translator package is available at:
+
+```text
+agents/a2a-translator.zip
+```
+
+Verify the local translator endpoint:
+
+```bash
+curl http://localhost:9100/agents/translator/health
+```
+
+Test the local router:
+
+```bash
+curl "http://localhost:9100/router/route?query=translate this to French"
+```
+
 ## API Endpoints
 
 ### Root
