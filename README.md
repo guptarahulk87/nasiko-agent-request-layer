@@ -66,9 +66,13 @@ This repository includes a lightweight local demo that matches the first-agent
 deployment flow:
 
 ```bash
+copy .nasiko-local.env.example .nasiko-local.env
 cat orchestrator/superuser_credentials.json
 uvicorn app.main:app --host 127.0.0.1 --port 9100 --reload
 ```
+
+Edit `.nasiko-local.env` with real API keys and production-safe secrets before
+using this outside a local demo.
 
 Then open:
 
